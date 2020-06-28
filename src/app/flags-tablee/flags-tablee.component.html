@@ -1,0 +1,19 @@
+<h2>My Countries</h2>
+<table class="darkTable">
+  <tr>
+    <th>Name</th>
+    <th>languages</th>
+    <th>capital</th>
+    <th>population</th>
+    <th>flag</th>
+  </tr>
+  <tr *ngFor="let country of countries">
+
+    <td>{{country.name}}</td>
+    <td>{{country.languages[0]}}</td>
+    <td>{{country.capital}}</td>
+    <td>{{country.population}}</td>
+    <td><img class ='flag' src={{country.flag}} ></td>
+
+  </tr>
+</table> 
