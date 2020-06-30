@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Flag } from './flag-data';
 import { Country } from './country';
 import { Language } from './country';
-import { Observable, of } from 'rxjs';
+import { Observable, of} from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({

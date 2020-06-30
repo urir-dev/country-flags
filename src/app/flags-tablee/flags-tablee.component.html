@@ -1,4 +1,7 @@
 <h2>My Countries</h2>
+
+<input [(ngModel)]="search" (input)="filter($event.target.value)" /> 
+<button class="submit">Find it</button>
 <table class="darkTable">
   <tr>
     <th>Name</th>
@@ -7,10 +10,14 @@
     <th>population</th>
     <th>flag</th>
   </tr>
-  <tr *ngFor="let country of countries">
+  <tr *ngFor="let country of filteredCountries">
 
     <td>{{country.name}}</td>
-    <td>{{country.languages[0]}}</td>
+    <td>
+      <div *ngFor="let languge of country.languages">
+        {{languge.name}}
+      </div>
+    </td>
     <td>{{country.capital}}</td>
     <td>{{country.population}}</td>
     <td><img class ='flag' src={{country.flag}} ></td>
